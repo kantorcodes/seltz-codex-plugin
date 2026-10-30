@@ -7,7 +7,7 @@
     "name": "Seltz",
     "url": "https://seltz.ai"
   },
-  "repository": "https://github.com/hashgraph-online/seltz-codex-plugin",
+  "repository": "https://github.com/seltz-ai/seltz-codex-plugin",
   "homepage": "https://seltz.ai",
   "keywords": ["seltz", "web-search", "research", "web-knowledge", "mcp"],
   "skills": "./skills/",
@@ -15,7 +15,7 @@
   "interface": {
     "displayName": "Seltz",
     "shortDescription": "Real-time, source-backed web knowledge for Codex.",
-    "longDescription": "Use Seltz's official Streamable HTTP MCP server to search the live web for current, source-backed context. The plugin exposes Seltz's documented search tool, requires users to authenticate with their Seltz API key in Codex, and does not claim that search output is complete, authoritative, or a substitute for reviewing the linked sources.",
+    "longDescription": "Use Seltz's official Streamable HTTP MCP server to search the live web for current, source-backed context. The plugin connects Codex to Seltz's documented MCP tools, requires users to sign in to their Seltz account when connecting, and does not claim that search output is complete, authoritative, or a substitute for reviewing the linked sources.",
     "developerName": "Seltz",
     "category": "Research",
     "capabilities": ["Interactive", "Read"],
