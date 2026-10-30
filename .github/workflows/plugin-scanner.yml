@@ -57,3 +57,15 @@ jobs:
           path: hol-plugin-scan-report.md
           if-no-files-found: warn
           retention-days: 14
+
+  # aggregating job the org rulesets require as the `ci` status check on main
+  ci:
+    if: always()
+    needs: [scan]
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Job results: ${{ toJSON(needs.*.result) }}"
+          if [[ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" == "true" ]]; then
+            exit 1
+          fi
